@@ -1,0 +1,38 @@
+name: Daily C++ Survival Lab
+
+on:
+  schedule:
+    # Runs every day at 21:00 UTC.
+    - cron: '0 21 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  daily-check:
+    name: Read plan, build, run, and test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Read required project files
+        run: |
+          cat README.md
+          cat PROJECT_STATUS.md
+          cat PROJECT_ROADMAP.md
+          cat DAILY_LOG.md
+
+      - name: Configure CMake
+        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug
+
+      - name: Build
+        run: cmake --build build
+
+      - name: Run executable
+        run: ./build/survival_lab
+
+      - name: Run tests
+        run: ctest --test-dir build --output-on-failure
