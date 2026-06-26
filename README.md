@@ -12,10 +12,6 @@ Build the project one tiny C++20 increment at a time while keeping it buildable,
 A set of intermediate beginner-friendly C++20 notes is available in [`tutorials/cpp-old-professor`](tutorials/cpp-old-professor/README.md). The notes focus on value semantics, RAII, const-correct interfaces, error handling, STL algorithms, and small practice labs.
 
 
-## Day 02: Pointer Survival Lab
-
-Day 02 uses runnable C++ code with concise Chinese comments to teach pointer basics. See `include/survival/day02` for declarations and `src/day02` for implementations.
-
 ## Build
 
 ```bash
