@@ -6,6 +6,11 @@ A small daily C++ survival training project.
 
 Build the project one tiny C++20 increment at a time while keeping it buildable, runnable, and testable.
 
+
+## C++ Tutorials
+
+A set of intermediate beginner-friendly C++20 notes is available in [`tutorials/cpp-old-professor`](tutorials/cpp-old-professor/README.md). The notes focus on value semantics, RAII, const-correct interfaces, error handling, STL algorithms, and small practice labs.
+
 ## Build
 
 ```bash
